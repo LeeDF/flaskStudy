@@ -7,5 +7,5 @@ pymysql.install_as_MySQLdb()
 app = Flask(__name__)
 app.config.from_object('app.config')
 db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+
 from app import views, models
