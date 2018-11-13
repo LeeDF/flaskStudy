@@ -15,3 +15,5 @@ SQLALCHEMY_TRACK_MODIFICATIONS = True
 UPLOAD_FOLDER = os.path.join(basedir, 'static/images')
 IMGURL = 'http://10.0.0.87:83/'
 
+SECRET_KEY = '_5#y2L"F4Q8z\n\xec]/'
+

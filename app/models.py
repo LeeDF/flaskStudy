@@ -31,9 +31,15 @@ class Category(db.Model):
 
 class Blog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(225))
+    title = db.Column(db.String(225), unique=True)
     category = db.Column(db.Integer, db.ForeignKey('category.id'))
     content = db.Column(db.Text)
+
+    def __int__(self, title, category, content):
+        self.title = title
+        self.category = category
+        self.content = content
+
 
     def __repr__(self):
         return '<Blog %r>' % (self.title)
